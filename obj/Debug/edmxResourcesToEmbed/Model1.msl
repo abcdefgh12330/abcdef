@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLPVModelStoreContainer" CdmEntityContainer="QLPVEntities">
+    <EntitySetMapping Name="PhongViens">
+      <EntityTypeMapping TypeName="QLPVModel.PhongVien">
+        <MappingFragment StoreEntitySet="PhongVien">
+          <ScalarProperty Name="MaPV" ColumnName="MaPV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+          <ScalarProperty Name="NgayVaoLam" ColumnName="NgayVaoLam" />
+          <ScalarProperty Name="HinhAnhPV" ColumnName="HinhAnhPV" />
+          <ScalarProperty Name="Luong" ColumnName="Luong" />
+          <ScalarProperty Name="LoaiPV" ColumnName="LoaiPV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

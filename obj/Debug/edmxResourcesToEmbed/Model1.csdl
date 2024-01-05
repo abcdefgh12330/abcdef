@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLPVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PhongVien">
+    <Key>
+      <PropertyRef Name="MaPV" />
+    </Key>
+    <Property Name="MaPV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HoTen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="GioiTinh" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="NgayVaoLam" Type="DateTime" Precision="3" />
+    <Property Name="HinhAnhPV" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Luong" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LoaiPV" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="QLPVEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PhongViens" EntityType="Self.PhongVien" />
+  </EntityContainer>
+</Schema>

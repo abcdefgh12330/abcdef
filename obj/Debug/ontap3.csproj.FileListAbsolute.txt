@@ -1,0 +1,16 @@
+D:\OnTapC#\ontap3\bin\Debug\ontap3.exe.config
+D:\OnTapC#\ontap3\bin\Debug\ontap3.exe
+D:\OnTapC#\ontap3\bin\Debug\ontap3.pdb
+D:\OnTapC#\ontap3\obj\Debug\ontap3.csproj.AssemblyReference.cache
+D:\OnTapC#\ontap3\obj\Debug\ontap3.Form1.resources
+D:\OnTapC#\ontap3\obj\Debug\ontap3.Properties.Resources.resources
+D:\OnTapC#\ontap3\obj\Debug\ontap3.csproj.GenerateResource.cache
+D:\OnTapC#\ontap3\obj\Debug\ontap3.csproj.CoreCompileInputs.cache
+D:\OnTapC#\ontap3\obj\Debug\ontap3.exe
+D:\OnTapC#\ontap3\obj\Debug\ontap3.pdb
+D:\OnTapC#\ontap3\obj\Debug\ontap3.csproj.ResolveComReference.cache
+D:\OnTapC#\ontap3\bin\Debug\EntityFramework.dll
+D:\OnTapC#\ontap3\bin\Debug\EntityFramework.SqlServer.dll
+D:\OnTapC#\ontap3\bin\Debug\EntityFramework.xml
+D:\OnTapC#\ontap3\bin\Debug\EntityFramework.SqlServer.xml
+D:\OnTapC#\ontap3\obj\Debug\ontap3.csproj.CopyComplete

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLPVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PhongVien">
+    <Key>
+      <PropertyRef Name="MaPV" />
+    </Key>
+    <Property Name="MaPV" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="100" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="4" />
+    <Property Name="SoDienThoai" Type="nvarchar" MaxLength="12" />
+    <Property Name="NgayVaoLam" Type="datetime" />
+    <Property Name="HinhAnhPV" Type="varbinary(max)" />
+    <Property Name="Luong" Type="money" />
+    <Property Name="LoaiPV" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="QLPVModelStoreContainer">
+    <EntitySet Name="PhongVien" EntityType="Self.PhongVien" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
