@@ -26,6 +26,13 @@ namespace ontap3
         {
             setDefault();
             hienThiDuLieuTuCSDL();
+            loadDataToComboBox();
+        }
+
+        private void loadDataToComboBox()
+        {
+            List<bool?> listLoaiLV = db.PhongViens.Select(pv => pv.LoaiPV).Distinct().ToList();
+            cb_DSLoaiPV.DataSource = listLoaiLV;
         }
 
         private void setDefault()
@@ -366,9 +373,36 @@ namespace ontap3
 
         private void txt_SoGioLam_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+           if(!char.IsControl(e.KeyChar)|| !char.IsDigit(e.KeyChar)|| (e.KeyChar!= '.'))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string maNvSearch = txt_MaNVSearch.Text.Trim();
+            string hoTenSearch = txt_HoTenSearch.Text.Trim();
+            double tuGia = Double.Parse(txt_GiaTu.Text);
+            double denGia = Double.Parse(txt_GiaDen.Text);
+            bool loaiPV = (bool)cb_DSLoaiPV.SelectedItem;
+
+            List<PhongVien> listPVSearch = db.PhongViens.Where( pv => pv.MaPV.Contains(maNvSearch) 
+                                                                && pv.HoTen.Contains(hoTenSearch)
+                                                                && pv.LoaiPV == loaiPV
+                                                                && pv.Luong >= (decimal?)tuGia
+                                                                && pv.Luong <= (decimal?)denGia).ToList();
+            foreach (PhongVien pv in listPVSearch)
+            {
+                lv_DSPV.Items.Clear();
+                string[] data = { pv.MaPV, pv.HoTen, pv.GioiTinh, pv.NgayVaoLam.ToString() };
+                ListViewItem lvi = new ListViewItem(data);
+                PV pvModel = new PV(pv);
+                if (pvModel.isYellowBackgroud())
+                {
+                    lvi.BackColor = Color.Yellow;
+                }
+                lv_DSPV.Items.Add(lvi);
             }
         }
     }

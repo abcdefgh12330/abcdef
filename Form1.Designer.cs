@@ -65,6 +65,12 @@
             this.col_NgayVaoLam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lb_Title = new System.Windows.Forms.Label();
             this.pb_HinhAnhPhongVien = new System.Windows.Forms.PictureBox();
+            this.cb_DSLoaiPV = new System.Windows.Forms.ComboBox();
+            this.txt_MaNVSearch = new System.Windows.Forms.TextBox();
+            this.txt_HoTenSearch = new System.Windows.Forms.TextBox();
+            this.txt_GiaTu = new System.Windows.Forms.TextBox();
+            this.txt_GiaDen = new System.Windows.Forms.TextBox();
+            this.btn_Search = new System.Windows.Forms.Button();
             this.gb_ThongTinPhongVien.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -488,11 +494,63 @@
             this.pb_HinhAnhPhongVien.TabStop = false;
             this.pb_HinhAnhPhongVien.Click += new System.EventHandler(this.pb_HinhAnhPhongVien_Click);
             // 
+            // cb_DSLoaiPV
+            // 
+            this.cb_DSLoaiPV.FormattingEnabled = true;
+            this.cb_DSLoaiPV.Location = new System.Drawing.Point(583, 181);
+            this.cb_DSLoaiPV.Name = "cb_DSLoaiPV";
+            this.cb_DSLoaiPV.Size = new System.Drawing.Size(121, 21);
+            this.cb_DSLoaiPV.TabIndex = 5;
+            // 
+            // txt_MaNVSearch
+            // 
+            this.txt_MaNVSearch.Location = new System.Drawing.Point(583, 71);
+            this.txt_MaNVSearch.Name = "txt_MaNVSearch";
+            this.txt_MaNVSearch.Size = new System.Drawing.Size(100, 20);
+            this.txt_MaNVSearch.TabIndex = 6;
+            // 
+            // txt_HoTenSearch
+            // 
+            this.txt_HoTenSearch.Location = new System.Drawing.Point(583, 136);
+            this.txt_HoTenSearch.Name = "txt_HoTenSearch";
+            this.txt_HoTenSearch.Size = new System.Drawing.Size(100, 20);
+            this.txt_HoTenSearch.TabIndex = 7;
+            // 
+            // txt_GiaTu
+            // 
+            this.txt_GiaTu.Location = new System.Drawing.Point(569, 382);
+            this.txt_GiaTu.Name = "txt_GiaTu";
+            this.txt_GiaTu.Size = new System.Drawing.Size(90, 20);
+            this.txt_GiaTu.TabIndex = 8;
+            // 
+            // txt_GiaDen
+            // 
+            this.txt_GiaDen.Location = new System.Drawing.Point(569, 435);
+            this.txt_GiaDen.Name = "txt_GiaDen";
+            this.txt_GiaDen.Size = new System.Drawing.Size(90, 20);
+            this.txt_GiaDen.TabIndex = 9;
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.Location = new System.Drawing.Point(569, 491);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(75, 23);
+            this.btn_Search.TabIndex = 10;
+            this.btn_Search.Text = "Tìm Kiếm";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 602);
+            this.Controls.Add(this.btn_Search);
+            this.Controls.Add(this.txt_GiaDen);
+            this.Controls.Add(this.txt_GiaTu);
+            this.Controls.Add(this.txt_HoTenSearch);
+            this.Controls.Add(this.txt_MaNVSearch);
+            this.Controls.Add(this.cb_DSLoaiPV);
             this.Controls.Add(this.pb_HinhAnhPhongVien);
             this.Controls.Add(this.lb_Title);
             this.Controls.Add(this.gb_DSPhongVien);
@@ -555,6 +613,12 @@
         private System.Windows.Forms.ColumnHeader col_HoTen;
         private System.Windows.Forms.ColumnHeader col_GioiTinh;
         private System.Windows.Forms.ColumnHeader col_NgayVaoLam;
+        private System.Windows.Forms.ComboBox cb_DSLoaiPV;
+        private System.Windows.Forms.TextBox txt_MaNVSearch;
+        private System.Windows.Forms.TextBox txt_HoTenSearch;
+        private System.Windows.Forms.TextBox txt_GiaTu;
+        private System.Windows.Forms.TextBox txt_GiaDen;
+        private System.Windows.Forms.Button btn_Search;
     }
 }
 
